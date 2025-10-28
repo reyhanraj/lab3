@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyhan Raj - CI230099</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>REYHAN RAJ ANANDAN</h1>
+        <nav>
+            <a href="index.html" class="active">📚 Biodata</a>
+            <a href="hobbies.html">⚽ Hobbies</a>
+            <a href="campus.html">🎓 Campus Life</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="profile-card">
+            <h2>About Me</h2>
+            <div class="profile-layout">
+                <div class="info-details">
+                    <p><strong>Course:</strong> Bachelors In Computer Science [Software Engineering] UTHM</p>
+                    <p><strong>D.O.B:</strong> 27/02/2002</p>
+                    <p><strong>Race/Religion:</strong> Indian / Bahai</p>
+                    <p><strong>Programming Skills:</strong> Still Learning</p>
+                    <p><strong>2025 Wishlist:</strong> Learn many other traits that will help me in the real world.</p>
+                    
+                    <h3>Contact & Location</h3>
+                    <ul class="contact-list">
+                        <li><strong>Mobile:</strong> 016-9260351</li>
+                        <li><strong>Social Media:</strong> @reyhananandan</li>
+                        <li><strong>Street/Town:</strong> Taman Sri Pulai 3 // Sikamat</li>
+                        <li><strong>District/State:</strong> Seremban // Negeri Sembilan</li>
+                    </ul>
+                </div>
+                
+                <div class="profile-photo">
+                    <img src="reyhan.jpg.jpeg" alt="Reyhan Raj Profile Picture">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Reyhan Raj. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
