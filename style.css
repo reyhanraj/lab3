@@ -1,0 +1,153 @@
+/* --- Global Styles: Setting the Stage --- */
+:root {
+    --primary-color: #0077b6; /* UTHM-like Blue/Student Focus */
+    --secondary-color: #fca311; /* Accent Color */
+    --text-light: #e5e5e5;
+    --text-dark: #14213d; /* Near Black */
+    --bg-dark: #1c273a; /* Dark background for a 'modern' look */
+    --font-stack: 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    background-color: var(--bg-dark); /* Dark Mode Base */
+    color: var(--text-light);
+}
+
+/* --- Header & Navigation: Layout and Style --- */
+header {
+    background-color: var(--text-dark);
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* CSS Transition */
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--primary-color);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text Shadow */
+}
+
+/* --- Main Content Layout --- */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* --- Profile Card Styling: Biodata --- */
+.profile-card {
+    background-color: #2b3952; /* Slightly lighter dark background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Box Shadow */
+}
+
+.profile-card h2 {
+    color: var(--secondary-color);
+    border-bottom: 3px dashed var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Flexbox for Image and Text */
+.profile-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Aligns content to the top */
+}
+
+.info-details {
+    flex: 2; /* Takes up more space */
+}
+
+.profile-photo {
+    flex: 1; /* Takes up less space */
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%; /* Circular Image */
+    border: 5px solid var(--primary-color);
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.profile-photo img:hover {
+    transform: scale(1.05) rotate(3deg); /* Hover effect */
+}
+
+strong {
+    color: var(--secondary-color);
+    display: inline-block;
+    min-width: 120px; /* Aligns the data visually */
+}
+
+/* List Styling */
+.contact-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.contact-list li {
+    background-color: #3b4d6b;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border-left: 5px solid var(--primary-color);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    color: var(--text-light);
+}
+
+/* --- Media Query for Responsiveness --- */
+@media (max-width: 768px) {
+    .profile-layout {
+        flex-direction: column; /* Stacks layout vertically on small screens */
+        align-items: center;
+    }
+    .profile-photo {
+        order: -1; /* Puts the photo first on mobile */
+        margin-bottom: 20px;
+    }
+}
