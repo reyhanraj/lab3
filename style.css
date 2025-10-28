@@ -1,11 +1,12 @@
-/* --- Global Styles: Setting the Stage --- */
+/* --- Basic Global Styles --- */
+/* Using standard, readable colors for a basic look */
 :root {
-    --primary-color: #0077b6; /* UTHM-like Blue/Student Focus */
-    --secondary-color: #fca311; /* Accent Color */
-    --text-light: #e5e5e5;
-    --text-dark: #14213d; /* Near Black */
-    --bg-dark: #1c273a; /* Dark background for a 'modern' look */
-    --font-stack: 'Arial', sans-serif;
+    --primary-color: #0056b3; /* Dark Blue */
+    --accent-color: #28a745; /* Green Accent */
+    --text-color: #333;
+    --bg-color: #f4f4f4; /* Light Gray Background */
+    --white: #ffffff;
+    --font-stack: Arial, sans-serif;
 }
 
 * {
@@ -17,137 +18,160 @@
 body {
     font-family: var(--font-stack);
     line-height: 1.6;
-    background-color: var(--bg-dark); /* Dark Mode Base */
-    color: var(--text-light);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
-/* --- Header & Navigation: Layout and Style --- */
+/* --- Header & Navigation: Simple Structure --- */
 header {
-    background-color: var(--text-dark);
-    padding: 1rem 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
     text-align: center;
-    border-bottom: 5px solid var(--primary-color);
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0.5rem 0;
+    /* Simple block display for basic stacking on small screens */
+    display: block; 
+    padding: 10px 0;
 }
 
 nav a {
-    color: var(--text-light);
+    color: var(--white);
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s; /* CSS Transition */
+    padding: 5px 15px;
+    margin: 0 5px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-    background-color: var(--primary-color);
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text Shadow */
+    background-color: #003c80; /* Darker blue on hover */
+    border-radius: 5px;
 }
 
-/* --- Main Content Layout --- */
+/* --- Main Content Container --- */
 .container {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 0 20px;
+    width: 80%;
+    margin: 30px auto;
+    overflow: hidden; /* Clear floats for simple layout */
 }
 
-/* --- Profile Card Styling: Biodata --- */
-.profile-card {
-    background-color: #2b3952; /* Slightly lighter dark background */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Box Shadow */
-}
-
-.profile-card h2 {
-    color: var(--secondary-color);
-    border-bottom: 3px dashed var(--primary-color);
-    padding-bottom: 10px;
+/* --- General Content Card/Section --- */
+.content-section {
+    background-color: var(--white);
+    padding: 20px;
     margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Basic shadow */
 }
 
-/* Flexbox for Image and Text */
-.profile-layout {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start; /* Aligns content to the top */
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
-.info-details {
-    flex: 2; /* Takes up more space */
-}
+/* --- 1. Biodata Page Styling (index.html) --- */
 
+/* Simple float-based layout for image and text */
 .profile-photo {
-    flex: 1; /* Takes up less space */
+    width: 200px;
+    float: right; /* Floats image to the right */
+    margin-left: 20px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
 .profile-photo img {
     width: 100%;
-    max-width: 250px;
     height: auto;
-    border-radius: 50%; /* Circular Image */
-    border: 5px solid var(--primary-color);
-    object-fit: cover;
-    transition: transform 0.5s;
+    border-radius: 8px; /* Slightly rounded corners */
+    border: 3px solid var(--accent-color);
 }
 
-.profile-photo img:hover {
-    transform: scale(1.05) rotate(3deg); /* Hover effect */
-}
-
-strong {
-    color: var(--secondary-color);
-    display: inline-block;
-    min-width: 120px; /* Aligns the data visually */
-}
-
-/* List Styling */
-.contact-list {
+/* Basic List Styling */
+.info-details ul {
     list-style-type: none;
     padding-left: 0;
-    margin-top: 15px;
 }
 
-.contact-list li {
-    background-color: #3b4d6b;
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 3px;
-    border-left: 5px solid var(--primary-color);
+.info-details li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #ccc;
 }
+
+/* --- 2. Hobbies Page Styling (hobbies.html) --- */
+
+.hobby-item {
+    float: left; /* Floats items for a side-by-side layout */
+    width: 48%; /* Allows two items per row with margin */
+    margin-right: 4%;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 5px solid var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* Clear float for the last item in a row */
+.hobby-item:nth-child(2n) {
+    margin-right: 0;
+    clear: right;
+}
+
+.hobby-item h3 {
+    color: var(--accent-color);
+}
+
+/* --- 3. Campus Life Page Styling (campus.html) --- */
+
+.moment-item {
+    float: left; /* Floats small images for a grid effect */
+    width: 30%; 
+    margin: 0 1.5% 15px 1.5%;
+    text-align: center;
+}
+
+.moment-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    transition: opacity 0.3s;
+}
+
+.moment-item img:hover {
+    opacity: 0.7; /* Simple visual change on hover */
+}
+
 
 /* --- Footer --- */
 footer {
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    border-top: 1px solid #333;
-    color: var(--text-light);
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    clear: both; /* Crucial to clear any previous floats */
+    margin-top: 20px;
 }
 
-/* --- Media Query for Responsiveness --- */
-@media (max-width: 768px) {
-    .profile-layout {
-        flex-direction: column; /* Stacks layout vertically on small screens */
-        align-items: center;
+/* --- Basic Media Query for Responsiveness --- */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
     }
-    .profile-photo {
-        order: -1; /* Puts the photo first on mobile */
-        margin-bottom: 20px;
+
+    /* Stacks items vertically on small screens */
+    .profile-photo, .hobby-item, .moment-item {
+        float: none;
+        width: 100%;
+        margin-right: 0;
     }
 }
