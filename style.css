@@ -1,10 +1,10 @@
 
 
 :root {
-    --primary-color: #0056b3; /* Dark Blue */
-    --accent-color: #28a745; /* Green Accent */
+    --primary-color: #0056b3; 
+    --accent-color: #28a745; 
     --text-color: #333;
-    --bg-color: #f4f4f4; /* Light Gray Background */
+    --bg-color: #f4f4f4;
     --white: #ffffff;
     --font-stack: Arial, sans-serif;
 }
@@ -22,7 +22,7 @@ body {
     color: var(--text-color);
 }
 
-/* --- Header & Navigation: Simple Structure --- */
+
 header {
     background-color: var(--primary-color);
     color: var(--white);
@@ -36,7 +36,7 @@ header h1 {
 }
 
 nav {
-    /* Simple block display for basic stacking on small screens */
+    
     display: block; 
     padding: 10px 0;
 }
@@ -53,24 +53,24 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    background-color: #003c80; /* Darker blue on hover */
+    background-color: #003c80; 
     border-radius: 5px;
 }
 
-/* --- Main Content Container --- */
+
 .container {
     width: 80%;
     margin: 30px auto;
-    overflow: hidden; /* Clear floats for simple layout */
+    overflow: hidden; 
 }
 
-/* --- General Content Card/Section --- */
+
 .content-section {
     background-color: var(--white);
     padding: 20px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Basic shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 h2 {
@@ -80,12 +80,10 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* --- 1. Biodata Page Styling (index.html) --- */
 
-/* Simple float-based layout for image and text */
 .profile-photo {
     width: 200px;
-    float: right; /* Floats image to the right */
+    float: right; 
     margin-left: 20px;
     margin-bottom: 15px;
     text-align: center;
@@ -94,11 +92,11 @@ h2 {
 .profile-photo img {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Slightly rounded corners */
+    border-radius: 8px; 
     border: 3px solid var(--accent-color);
 }
 
-/* Basic List Styling */
+
 .info-details ul {
     list-style-type: none;
     padding-left: 0;
@@ -109,11 +107,11 @@ h2 {
     border-bottom: 1px dotted #ccc;
 }
 
-/* --- 2. Hobbies Page Styling (hobbies.html) --- */
+ 
 
 .hobby-item {
-    float: left; /* Floats items for a side-by-side layout */
-    width: 48%; /* Allows two items per row with margin */
+    float: left; 
+    width: 48%; 
     margin-right: 4%;
     padding: 15px;
     background-color: #f9f9f9;
@@ -121,7 +119,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Clear float for the last item in a row */
+
 .hobby-item:nth-child(2n) {
     margin-right: 0;
     clear: right;
@@ -131,10 +129,10 @@ h2 {
     color: var(--accent-color);
 }
 
-/* --- 3. Campus Life Page Styling (campus.html) --- */
+
 
 .moment-item {
-    float: left; /* Floats small images for a grid effect */
+    float: left; 
     width: 30%; 
     margin: 0 1.5% 15px 1.5%;
     text-align: center;
@@ -148,27 +146,27 @@ h2 {
 }
 
 .moment-item img:hover {
-    opacity: 0.7; /* Simple visual change on hover */
+    opacity: 0.7;
 }
 
 
-/* --- Footer --- */
+
 footer {
     text-align: center;
     padding: 15px;
     background-color: var(--primary-color);
     color: var(--white);
-    clear: both; /* Crucial to clear any previous floats */
+    clear: both; 
     margin-top: 20px;
 }
 
-/* --- Basic Media Query for Responsiveness --- */
+
 @media (max-width: 600px) {
     .container {
         width: 95%;
     }
 
-    /* Stacks items vertically on small screens */
+   
     .profile-photo, .hobby-item, .moment-item {
         float: none;
         width: 100%;
